@@ -32,6 +32,7 @@ _$CurrentImpl _$$CurrentImplFromJson(Map<String, dynamic> json) =>
       tempC: json['temp_c'],
       feelsLikeTempC: json['feelslike_c'],
       tempF: (json['temp_f'] as num?)?.toDouble(),
+      uv: json['uv'],
       isDay: json['is_day'],
       condition: json['condition'] == null
           ? null
@@ -44,6 +45,7 @@ Map<String, dynamic> _$$CurrentImplToJson(_$CurrentImpl instance) =>
       'temp_c': instance.tempC,
       'feelslike_c': instance.feelsLikeTempC,
       'temp_f': instance.tempF,
+      'uv': instance.uv,
       'is_day': instance.isDay,
       'condition': instance.condition,
     };

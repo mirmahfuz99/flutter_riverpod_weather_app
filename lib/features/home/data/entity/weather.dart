@@ -25,6 +25,7 @@ part 'weather.g.dart';
     @JsonKey(name: 'temp_c') dynamic tempC,
     @JsonKey(name: 'feelslike_c') dynamic feelsLikeTempC,
     @JsonKey(name: 'temp_f') double? tempF,
+    @JsonKey(name: 'uv') dynamic uv,
     @JsonKey(name: 'is_day') dynamic isDay,
     @JsonKey(name: 'condition') Condition? condition,
   }) = _Current;

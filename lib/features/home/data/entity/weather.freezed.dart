@@ -264,6 +264,8 @@ mixin _$Current {
   dynamic get feelsLikeTempC => throw _privateConstructorUsedError;
   @JsonKey(name: 'temp_f')
   double? get tempF => throw _privateConstructorUsedError;
+  @JsonKey(name: 'uv')
+  dynamic get uv => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_day')
   dynamic get isDay => throw _privateConstructorUsedError;
   @JsonKey(name: 'condition')
@@ -284,6 +286,7 @@ abstract class $CurrentCopyWith<$Res> {
       @JsonKey(name: 'temp_c') dynamic tempC,
       @JsonKey(name: 'feelslike_c') dynamic feelsLikeTempC,
       @JsonKey(name: 'temp_f') double? tempF,
+      @JsonKey(name: 'uv') dynamic uv,
       @JsonKey(name: 'is_day') dynamic isDay,
       @JsonKey(name: 'condition') Condition? condition});
 
@@ -307,6 +310,7 @@ class _$CurrentCopyWithImpl<$Res, $Val extends Current>
     Object? tempC = freezed,
     Object? feelsLikeTempC = freezed,
     Object? tempF = freezed,
+    Object? uv = freezed,
     Object? isDay = freezed,
     Object? condition = freezed,
   }) {
@@ -327,6 +331,10 @@ class _$CurrentCopyWithImpl<$Res, $Val extends Current>
           ? _value.tempF
           : tempF // ignore: cast_nullable_to_non_nullable
               as double?,
+      uv: freezed == uv
+          ? _value.uv
+          : uv // ignore: cast_nullable_to_non_nullable
+              as dynamic,
       isDay: freezed == isDay
           ? _value.isDay
           : isDay // ignore: cast_nullable_to_non_nullable
@@ -363,6 +371,7 @@ abstract class _$$CurrentImplCopyWith<$Res> implements $CurrentCopyWith<$Res> {
       @JsonKey(name: 'temp_c') dynamic tempC,
       @JsonKey(name: 'feelslike_c') dynamic feelsLikeTempC,
       @JsonKey(name: 'temp_f') double? tempF,
+      @JsonKey(name: 'uv') dynamic uv,
       @JsonKey(name: 'is_day') dynamic isDay,
       @JsonKey(name: 'condition') Condition? condition});
 
@@ -385,6 +394,7 @@ class __$$CurrentImplCopyWithImpl<$Res>
     Object? tempC = freezed,
     Object? feelsLikeTempC = freezed,
     Object? tempF = freezed,
+    Object? uv = freezed,
     Object? isDay = freezed,
     Object? condition = freezed,
   }) {
@@ -405,6 +415,10 @@ class __$$CurrentImplCopyWithImpl<$Res>
           ? _value.tempF
           : tempF // ignore: cast_nullable_to_non_nullable
               as double?,
+      uv: freezed == uv
+          ? _value.uv
+          : uv // ignore: cast_nullable_to_non_nullable
+              as dynamic,
       isDay: freezed == isDay
           ? _value.isDay
           : isDay // ignore: cast_nullable_to_non_nullable
@@ -425,6 +439,7 @@ class _$CurrentImpl implements _Current {
       @JsonKey(name: 'temp_c') this.tempC,
       @JsonKey(name: 'feelslike_c') this.feelsLikeTempC,
       @JsonKey(name: 'temp_f') this.tempF,
+      @JsonKey(name: 'uv') this.uv,
       @JsonKey(name: 'is_day') this.isDay,
       @JsonKey(name: 'condition') this.condition});
 
@@ -444,6 +459,9 @@ class _$CurrentImpl implements _Current {
   @JsonKey(name: 'temp_f')
   final double? tempF;
   @override
+  @JsonKey(name: 'uv')
+  final dynamic uv;
+  @override
   @JsonKey(name: 'is_day')
   final dynamic isDay;
   @override
@@ -452,7 +470,7 @@ class _$CurrentImpl implements _Current {
 
   @override
   String toString() {
-    return 'Current(lastUpdated: $lastUpdated, tempC: $tempC, feelsLikeTempC: $feelsLikeTempC, tempF: $tempF, isDay: $isDay, condition: $condition)';
+    return 'Current(lastUpdated: $lastUpdated, tempC: $tempC, feelsLikeTempC: $feelsLikeTempC, tempF: $tempF, uv: $uv, isDay: $isDay, condition: $condition)';
   }
 
   @override
@@ -466,6 +484,7 @@ class _$CurrentImpl implements _Current {
             const DeepCollectionEquality()
                 .equals(other.feelsLikeTempC, feelsLikeTempC) &&
             (identical(other.tempF, tempF) || other.tempF == tempF) &&
+            const DeepCollectionEquality().equals(other.uv, uv) &&
             const DeepCollectionEquality().equals(other.isDay, isDay) &&
             (identical(other.condition, condition) ||
                 other.condition == condition));
@@ -479,6 +498,7 @@ class _$CurrentImpl implements _Current {
       const DeepCollectionEquality().hash(tempC),
       const DeepCollectionEquality().hash(feelsLikeTempC),
       tempF,
+      const DeepCollectionEquality().hash(uv),
       const DeepCollectionEquality().hash(isDay),
       condition);
 
@@ -502,6 +522,7 @@ abstract class _Current implements Current {
       @JsonKey(name: 'temp_c') final dynamic tempC,
       @JsonKey(name: 'feelslike_c') final dynamic feelsLikeTempC,
       @JsonKey(name: 'temp_f') final double? tempF,
+      @JsonKey(name: 'uv') final dynamic uv,
       @JsonKey(name: 'is_day') final dynamic isDay,
       @JsonKey(name: 'condition') final Condition? condition}) = _$CurrentImpl;
 
@@ -519,6 +540,9 @@ abstract class _Current implements Current {
   @override
   @JsonKey(name: 'temp_f')
   double? get tempF;
+  @override
+  @JsonKey(name: 'uv')
+  dynamic get uv;
   @override
   @JsonKey(name: 'is_day')
   dynamic get isDay;
