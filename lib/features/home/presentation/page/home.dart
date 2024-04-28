@@ -122,9 +122,8 @@ class _WeatherInfoView extends StatelessWidget {
                     height: 100,
                     child: Column(
                       children: [
-                        Text("${info.forecast?.forecastday?.elementAt(0).hours!.elementAt(index).time}"),
                         Text(DateFormat('h a').format(DateTime.parse("${info.forecast?.forecastday?.elementAt(0).hours!.elementAt(index).time}"))),
-
+                        const SizedBox(height: 20,),
                         SizedBox(
                             width: 50,
                             child: CustomCachedNetworkImage(
